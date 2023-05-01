@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORS 모듈 사용하기 위한 HTML</title>
+</head>
+<body>
+    <h1 id="sound"></h1>
+    <input type="text" id="name">
+    <button onclick="getSound()">API 요청</button>
+    <script>
+        //https://developer.mozilla.org/ko/docs/Web/API/Fetch_API/Using_Fetch : DOCS 보면서 사용법 익히기
+        function getSound() {
+            // input에 입력한 값 받아서 name에 저장
+            const name = document.getElementById("name").value 
+            //백틱기호 이용해 ${name} 변수 표현
+            fetch('http://localhost:3000/sound/'+name) 
+            .then((response) => response.json())
+            .then((data) => {
+                //console.log(data) // cat 입력 - {sound: '야옹'}
+                //console.log(data) // dog 입력 - {sound: '멍멍'}
+                //console.log(data) // car 입력 - {sound: '알수없음'}
+                //document.getElementById("sound").innerHTML = data //[Obejct Object] 출력됨
+                document.getElementById("sound").innerHTML = data.sound //야옹 , 멍멍, 알수없음 출력됨
+            });
+        }
+    </script>
+</body>
+</html>
