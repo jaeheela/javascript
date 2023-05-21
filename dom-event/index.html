@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum App</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!-- <a href="http://www.naver.com">네이버 바로가기</a> -->
+    <h2 id="clock">00:00:00</h2>
+    <form id="login-form">
+        <input required maxlength="15" type="text" placeholder="what is your name?" />
+        <!-- <button>Log In</button> -->
+        <input type="submit" value="Log In" />
+    </form>
+    <h1 id="greeting" class="none"></h1>
+    <form id="todo-form">
+        <input type="text" placeholder="Write a To Do and Press Enter" required />
+    </form>
+    <ul id="todo-list"></ul>
+    <div id="quote">
+        <span></span>
+        <span></span>
+    </div>
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+    <button id="logoutBtn">Log Out</button>
+    <!-- <script src="/js/00-app.js"></script> -->
+    <script src="/js/01-greetings.js" defer></script>
+    <script src="/js/02-clock.js" defer></script>
+    <script src="/js/03-quotes.js" defer></script>
+    <script src="/js/04-background.js" defer></script>
+    <script src="/js/05-todo.js" defer></script>
+    <script src="/js/06-weather.js" defer></script>
+</body>
+
+</html>
